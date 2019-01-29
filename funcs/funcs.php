@@ -119,7 +119,7 @@
 		}
 	}
 
-	function enviarEmail($email, $nombre, $asunto, $cuerpo){
+function enviarEmail($email, $nombre, $asunto, $cuerpo){
 /* Configurar Email pendiente
 		require_once 'PHPMailer/PHPMailerAutoload.php';
 
