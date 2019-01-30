@@ -5,6 +5,19 @@
 	if(!isset($_SESSION["id_usuario"])){ //Si no ha iniciado sesión redirecciona a index.php
 		header("Location: index.php");
 	}
+	$j = "";
+	$t = "";
+	if(isset($_GET['j'])) $j = $_GET['j'];
+		if(isset($_GET['t'])) $t = $_GET['t'];
+	//$t = $_GET['t'];
+	if ($j == null) {
+		$j = 1;
+	}
+	if ($t =='1' and $j<'30') {
+		$j++;
+	} else {
+		$j--;
+	}
 
 	$idUsuario = $_SESSION['id_usuario'];
 	/*echo $idUsuario;*/
@@ -15,19 +28,21 @@
 	$row = $result->fetch_assoc();
 
 	/*Consulta para datos de trabajo de los Brokers*/
-	$sql2 = "SELECT id_usuario FROM trabajo t	INNER JOIN usuarios u ON t.id_usuario = u.id WHERE u.id = '$idUsuario'";
+	$sql2 = "SELECT id_usuario,date FROM trabajo t	INNER JOIN usuarios u ON t.id_usuario = u.id WHERE u.id = '$idUsuario'";
 	$result2 = $mysqli->query($sql2);
 	$row2 = $result2->fetch_assoc();
 
-	$sql3 = "SELECT * FROM trabajo t	INNER JOIN usuarios u ON t.id_usuario = u.id ";
+	$sql3 = "SELECT * FROM trabajo t	INNER JOIN usuarios u ON t.id_usuario = u.id LIMIT 1 offset $j";
 	$result3 = $mysqli->query($sql3);
+
+	echo $sql3;
 	//$row3 = $result3->fetch_assoc();
 
 	/*Consulta para Fechas*/
 	$sql4 = "SELECT date FROM trabajo";
 	$result4 = $mysqli->query($sql4);
 	$row4 = $result4->fetch_assoc();
-	echo $row4['date'];
+
 
 	/*convierto en formato UNIX FECHA para hacer la comparacion fecha de hoy*/
 	$fecha_hoy = date("Y-m-d");
@@ -84,6 +99,7 @@
 								<table class="table table-dark container tablita">
 									<thead>
 										<tr>
+											<th scope="col">DATE</th>
 											<th scope="col">BROKER</th>
 											<th scope="col">100 DAILY CALLS</th>
 											<th scope="col">50 DAILY LEADS</th>
@@ -95,15 +111,9 @@
 									<tbody>
 
 									<?php
-									/*
-									for ($i=0; $i <=sizeof($result3); $i++) {
-											echo "<tr><td>Hola".$row3[$i]["date"]."</td></tr>";
-									}
-									*/
-
 									while($row3 = $result3->fetch_assoc()){
-												echo $row3["date"].'<br>';
-												echo'<tr><th scope="col">'.$row3["nombre"].'</th>';
+										echo'<tr><th scope="col">'.$row3["date"].'</th>';
+												echo'<th scope="col">'.$row3["nombre"].'</th>';
 												echo'<th scope="col">'.$row3["calls"].'</th>';
 												echo'<th scope="col">'.$row3["leads"].'</th>';
 												echo'<th scope="col">'.$row3["followup"].'</th>';
@@ -113,6 +123,16 @@
 									?>
 									</tbody>
 								</table>
+								<script type="text/javascript">
+									function mover(x,y) {
+
+										location.href ="?j="+x+"&t="+y;
+
+									}
+								</script>
+
+								<button type="button" name="button" onclick="mover(<?php echo $j ?>,'1')">Avanzar</button>
+								<button type="button" name="button" onclick="mover(<?php echo $j ?>,'0')">Disminuir</button>
 							</ul>
 						<?php } else {?>
 
@@ -121,11 +141,12 @@
 								<li><a href='logout.php'>Cerrar Sesi&oacute;n</a></li>
 							</ul>
 								<div class="jumbotron">
-									<h2><?php echo 'Bienvenid@ '.utf8_decode($row['nombre']).'Today '.$fecha_hoy; ?></h1>
+									<h2><?php echo 'Bienvenid@ '.utf8_decode($row['nombre']).'Today '."El id es: ".$row['id']." La fecha es ".$fecha_hoy; ?></h1>
 								<?php /*Condicion de Fecha para Brokers*/ ?>
-								<?php	if (date("Y-m-d") == $fecha_hoy) { ?>
+								<?php	//if (date("Y-m-d") == $fecha_hoy) { ?>
+
 									<?php /*Condicion ¿Se hizo el registro del trabajo? para Brokers*/ ?>
-								<?php if ($row2['id_usuario'] != $idUsuario) {?>
+								<?php if ($row2['id_usuario'] <> $idUsuario OR $row2['date'] <> $fecha_hoy){?>
 
 										<form action="comprobar.php" method="post">
 											<table class="table table-dark container tablita">
@@ -147,9 +168,6 @@
 																<td><input type="checkbox" name="followup" value="1" id="myCheckbox3"></td>
 																<td><input type="checkbox" name="mails" value="1" id="myCheckbox4"></td>
 																<td><input type="checkbox" name="loads" value="1" id="tc"></td>
-																<td>
-																	<input type="file" name="archivos" value="">
-																</td>
 																<td><input type="submit" name="enviar" value="SUBMIT"></td>
 															</tr>
 												</tbody>
@@ -157,7 +175,7 @@
 										<?php } else {?>
 										<h1>YA HICISTE TU REGISTRO EN LA BASE DE DATOS</h1>
 									<?php } ?>
-								<?php } ?>
+								<?php// } ?>
 							<?php } ?>
 
 					</div>
