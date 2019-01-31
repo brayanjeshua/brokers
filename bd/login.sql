@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-01-2019 a las 15:52:31
+-- Tiempo de generación: 31-01-2019 a las 23:06:49
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 5.6.40
 
@@ -58,6 +58,18 @@ CREATE TABLE `trabajo` (
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `trabajo`
+--
+
+INSERT INTO `trabajo` (`id`, `id_usuario`, `calls`, `leads`, `followup`, `mails`, `loads`, `date`) VALUES
+(1, 2, 1, 1, 1, 1, 1, '2019-01-28'),
+(2, 2, 0, 0, 1, 1, 0, '2019-01-29'),
+(4, 2, 1, 1, 1, 1, 1, '2019-01-30'),
+(5, 2, 1, 1, 0, 0, 0, '2019-01-27'),
+(6, 2, 1, 1, 1, 1, 1, '2019-01-26'),
+(10, 2, 1, 1, 1, 1, 1, '2019-01-31');
+
 -- --------------------------------------------------------
 
 --
@@ -83,8 +95,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `password`, `nombre`, `correo`, `last_session`, `activacion`, `token`, `token_password`, `password_request`, `id_tipo`) VALUES
-(1, 'administracion', '$2y$10$ZZZgvjPCUK2mh67HsBsRHOjeWlpUN3JbPEdv6seKwW5CioocY9PZG', 'Jeshua', 'brayan@tradexusalogistics.com', '2019-01-30 14:58:05', 1, '13d39c7d4184fcccc18d90f70b18beac', '', 0, 1),
-(2, 'jcamilo', '$2y$10$BSet0meH2FGvu7jaNKmizuAqqfPNcdA/CbSI2RCAglE36llmS7h8C', 'Juan Camilo', 'jcamilo@tradexusalogistics.com', '2019-01-31 08:45:51', 1, 'e9be41827c3fab2d444cad992f031762', '', 0, 2),
+(1, 'administracion', '$2y$10$ZZZgvjPCUK2mh67HsBsRHOjeWlpUN3JbPEdv6seKwW5CioocY9PZG', 'Jeshua', 'brayan@tradexusalogistics.com', '2019-01-31 16:52:11', 1, '13d39c7d4184fcccc18d90f70b18beac', '', 0, 1),
+(2, 'jcamilo', '$2y$10$BSet0meH2FGvu7jaNKmizuAqqfPNcdA/CbSI2RCAglE36llmS7h8C', 'Juan Camilo', 'jcamilo@tradexusalogistics.com', '2019-01-31 16:52:27', 1, 'e9be41827c3fab2d444cad992f031762', '', 0, 2),
 (3, 'tony', '$2y$10$xo6EdDIn.o9nloPiarKgGuTPlH4VK591ZMPLVQvElG4PmTcQe.ACe', 'Anthony Manzanilla', 'anthony@tradexusalogistics.com', '2019-01-29 12:47:55', 1, '5cadc0911b9ac12690fb1ab67e08a7ee', '', 0, 2);
 
 --
@@ -124,7 +136,7 @@ ALTER TABLE `tipo_usuario`
 -- AUTO_INCREMENT de la tabla `trabajo`
 --
 ALTER TABLE `trabajo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
@@ -140,7 +152,7 @@ ALTER TABLE `usuarios`
 -- Filtros para la tabla `trabajo`
 --
 ALTER TABLE `trabajo`
-  ADD CONSTRAINT `trabajo_ibfk_1` FOREIGN KEY (`id`) REFERENCES `usuarios` (`id`);
+  ADD CONSTRAINT `trabajo_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

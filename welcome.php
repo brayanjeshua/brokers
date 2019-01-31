@@ -27,15 +27,17 @@
 	$result = $mysqli->query($sql);
 	$row = $result->fetch_assoc();
 
+	$fecha_hoy = date("Y-m-d");
 	/*Consulta para datos de trabajo de los Brokers*/
-	$sql2 = "SELECT id_usuario,date FROM trabajo t	INNER JOIN usuarios u ON t.id_usuario = u.id WHERE u.id = '$idUsuario'";
+	//$sql2 = "SELECT id_usuario,date FROM trabajo t INNER JOIN usuarios u ON t.id_usuario = u.id WHERE u.id = '$idUsuario'";
+	$sql2 = "SELECT * FROM trabajo WHERE trabajo.id_usuario = '$idUsuario' AND date = '$fecha_hoy'";
 	$result2 = $mysqli->query($sql2);
 	$row2 = $result2->fetch_assoc();
 
-	$sql3 = "SELECT * FROM trabajo t	INNER JOIN usuarios u ON t.id_usuario = u.id LIMIT 1 offset $j";
+	$sql3 = "SELECT * FROM trabajo t INNER JOIN usuarios u ON t.id_usuario = u.id LIMIT 1 offset $j";
 	$result3 = $mysqli->query($sql3);
 
-	echo $sql3;
+	//echo $sql3;
 	//$row3 = $result3->fetch_assoc();
 
 	/*Consulta para Fechas*/
@@ -125,9 +127,7 @@
 								</table>
 								<script type="text/javascript">
 									function mover(x,y) {
-
 										location.href ="?j="+x+"&t="+y;
-
 									}
 								</script>
 
@@ -146,7 +146,8 @@
 								<?php	//if (date("Y-m-d") == $fecha_hoy) { ?>
 
 									<?php /*Condicion ¿Se hizo el registro del trabajo? para Brokers*/ ?>
-								<?php if ($row2['id_usuario'] <> $idUsuario OR $row2['date'] <> $fecha_hoy){?>
+								<?php echo $sql2; ?>
+								<?php if (($row2['id_usuario'] <> $idUsuario) OR ($row2['date'] <> $fecha_hoy)) {?>
 
 										<form action="comprobar.php" method="post">
 											<table class="table table-dark container tablita">

@@ -19,6 +19,11 @@
   <head>
     <meta charset="utf-8">
     <title>Agregando Datos</title>
+		<style media="screen">
+			* {
+				background-color: #000;
+			}
+		</style>
   </head>
   <body>
 
@@ -84,6 +89,9 @@ function registrarTrabajo($id_user,$calls,$leads,$followup,$mails,$loads,$date) 
 
 registrarTrabajo($id_user,$calls,$leads,$followup,$mails,$loads,$date);
 
+
+sleep(2);
+header('Location: welcome.php');
 ?>
 </body>
 </html>
