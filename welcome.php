@@ -13,7 +13,7 @@
 	if ($j == null) {
 		$j = 1;
 	}
-	if ($t =='1' and $j<'30') {
+	if ($t =='1' and $j<'31') {
 		$j++;
 	} else {
 		$j--;
@@ -34,7 +34,7 @@
 	$result2 = $mysqli->query($sql2);
 	$row2 = $result2->fetch_assoc();
 
-	$sql3 = "SELECT * FROM trabajo t INNER JOIN usuarios u ON t.id_usuario = u.id LIMIT 1 offset $j";
+	$sql3 = "SELECT * FROM trabajo t INNER JOIN usuarios u ON t.id_usuario = u.id LIMIT 500 offset $j";
 	$result3 = $mysqli->query($sql3);
 
 	//echo $sql3;
