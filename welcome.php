@@ -2,22 +2,11 @@
 	session_start();
 	require 'funcs/conexion.php';
 	include 'funcs/funcs.php';
+
 	if(!isset($_SESSION["id_usuario"])){ //Si no ha iniciado sesión redirecciona a index.php
 		header("Location: index.php");
 	}
-	$j = "";
-	$t = "";
-	if(isset($_GET['j'])) $j = $_GET['j'];
-		if(isset($_GET['t'])) $t = $_GET['t'];
-	//$t = $_GET['t'];
-	if ($j == null) {
-		$j = 1;
-	}
-	if ($t =='1' and $j<'31') {
-		$j++;
-	} else {
-		$j--;
-	}
+	$fecha_hoy = date("Y-m-d");
 
 	$idUsuario = $_SESSION['id_usuario'];
 	/*echo $idUsuario;*/
@@ -27,24 +16,22 @@
 	$result = $mysqli->query($sql);
 	$row = $result->fetch_assoc();
 
-	$fecha_hoy = date("Y-m-d");
+
 	/*Consulta para datos de trabajo de los Brokers*/
 	//$sql2 = "SELECT id_usuario,date FROM trabajo t INNER JOIN usuarios u ON t.id_usuario = u.id WHERE u.id = '$idUsuario'";
 	$sql2 = "SELECT * FROM trabajo WHERE trabajo.id_usuario = '$idUsuario' AND date = '$fecha_hoy'";
 	$result2 = $mysqli->query($sql2);
 	$row2 = $result2->fetch_assoc();
 
-	$sql3 = "SELECT * FROM trabajo t INNER JOIN usuarios u ON t.id_usuario = u.id LIMIT 500 offset $j";
-	$result3 = $mysqli->query($sql3);
+	/*Consulta para leer base de datos de Trabajo*/
+	$sql3 = "SELECT * FROM trabajo t INNER JOIN usuarios u ON t.id_usuario = u.id ORDER BY t.date";
+	$result3 = mysqli_query($mysqli,$sql3);
 
-	//echo $sql3;
-	//$row3 = $result3->fetch_assoc();
 
 	/*Consulta para Fechas*/
 	$sql4 = "SELECT date FROM trabajo";
 	$result4 = $mysqli->query($sql4);
 	$row4 = $result4->fetch_assoc();
-
 
 	/*convierto en formato UNIX FECHA para hacer la comparacion fecha de hoy*/
 	$fecha_hoy = date("Y-m-d");
@@ -98,6 +85,7 @@
 							<ul class='nav navbar-nav navbar-right'>
 								<li><a href='logout.php'>Cerrar Sesi&oacute;n</a></li>
 							</ul>
+							<br>
 								<table class="table table-dark container tablita">
 									<thead>
 										<tr>
@@ -114,25 +102,45 @@
 
 									<?php
 									while($row3 = $result3->fetch_assoc()){
-										echo'<tr><th scope="col">'.$row3["date"].'</th>';
+
+										if ($row3["calls"] == 1 ) {
+											$row3["calls"] = 'SI';
+										} else {
+											$row3["calls"] = 'NO';
+										}
+										if ($row3["leads"] == 1 ) {
+											$row3["leads"] = 'SI';
+										} else {
+											$row3["leads"] = 'NO';
+										}
+										if ($row3["followup"] == 1 ) {
+											$row3["followup"] = 'SI';
+										} else {
+											$row3["followup"] = 'NO';
+										}
+										if ($row3["mails"] == 1 ) {
+											$row3["mails"] = 'SI';
+										} else {
+											$row3["mails"] = 'NO';
+										}
+										if ($row3["loads"] == 1 ) {
+											$row3["loads"] = 'SI';
+										} else {
+											$row3["loads"] = 'NO';
+										}
+										echo '<tr>';
+												echo'<th scope="col">'.$row3["date"].'</th>';
 												echo'<th scope="col">'.$row3["nombre"].'</th>';
 												echo'<th scope="col">'.$row3["calls"].'</th>';
 												echo'<th scope="col">'.$row3["leads"].'</th>';
 												echo'<th scope="col">'.$row3["followup"].'</th>';
 												echo'<th scope="col">'.$row3["mails"].'</th>';
-												echo'<th scope="col">'.$row3["loads"].'</th></tr>';
-										}
+												echo'<th scope="col">'.$row3["loads"].'</th>';
+										echo '</tr>';
+									}
 									?>
 									</tbody>
 								</table>
-								<script type="text/javascript">
-									function mover(x,y) {
-										location.href ="?j="+x+"&t="+y;
-									}
-								</script>
-
-								<button type="button" name="button" onclick="mover(<?php echo $j ?>,'1')">Avanzar</button>
-								<button type="button" name="button" onclick="mover(<?php echo $j ?>,'0')">Disminuir</button>
 							</ul>
 						<?php } else {?>
 
