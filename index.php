@@ -47,14 +47,13 @@
 		}
 		</style>
 		<div class="container-fluid">
-			<img width="100px" src="img/truck-login.png" class="rounded float-left">
-
 			<img width="500px" src="img/truck-login.png" class="rounded float-right">
 
 			<div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 				<div class="panel panel-info" >
 					<div class="panel-heading">
 						<div class="panel-title">Iniciar Sesi&oacute;n</div>
+						<img width="150px" src="img/logo-tradex.png" class="rounded float-left">
 						<div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="recupera.php">¿Se te olvid&oacute; tu contraseña?</a></div>
 					</div>
 
