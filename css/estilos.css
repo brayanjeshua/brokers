@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+  background-color:rgb(70, 75, 121);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family:Raleway;
+}
+.main {
+  margin-top:2%;
+  background-color:#FFF;
+  padding-bottom:50px;
+  width:65%;
+}
+form .input-group .input-group-addon {
+  position: relative;
+  top:4px;
+  padding:1.5%;
+}
+form .input-group {
+  background-color:#ccc;
+  border-radius:5px;
+}
+form .input-group .input-group-addon {
+  position: relative;
+  top:4px;
+  padding:1.5%;
+}
+form .input-group {
+  background-color:#ccc;
+  border-radius:5px;
+}
+
+ul {
+  background-color:#fff;
+}
+.tablita {
+  max-width:70%;
+  margin-top:50px;
+  text-align:center;
+  margin: auto;
+}
+#nombre {
+  font-weight:300;
+}
+td,th, tr {
+  margin:auto;
+  text-align:center;
+}
+#redondeo { border-radius:10px; }

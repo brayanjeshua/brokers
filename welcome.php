@@ -40,53 +40,33 @@
 <html>
 	<head>
 		<title>Welcome</title>
-		<link rel="stylesheet" href="css/bootstrap.min.css" >
-		<link rel="stylesheet" href="css/bootstrap-theme.min.css" >
-		<script src="js/bootstrap.min.js" ></script>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.js" charset="utf-8"></script>
 
-		<style>
-			body {
-			padding-top: 20px;
-			padding-bottom: 20px;
-			}
-			.tablita {
-			  max-width:70%;
-			  margin-top:50px;
-				text-align:center;
-				margin: auto;
-			}
-		</style>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"  integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/estilos.css">
 	</head>
 
 	<body>
 
 		<div class="container">
-			<nav class='navbar navbar-default'>
-				<div class='container-fluid'>
-					<div class='navbar-header'>
-						<button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar' aria-expanded='false' aria-controls='navbar'>
-							<span class='sr-only'>Men&uacute;</span>
-							<span class='icon-bar'></span>
-							<span class='icon-bar'></span>
-							<span class='icon-bar'></span>
-						</button>
-					</div>
 
-					<div id='navbar' class='navbar-collapse collapse'>
-						<ul class='nav navbar-nav'>
-							<li class='active'><a href='welcome.php'>Inicio</a></li>
+			<nav class='navbar'>
+
+						<ul class='nav nav-tabs justify-content-center'>
+
+							<li class='nav-item'><a class="nav-link active" href='welcome.php'>Inicio</a></li>
+
 						<?php /*Condicion para Validar que tipo de Usuario Entra*/ ?>
-
 						<?php if($_SESSION['tipo_usuario']==1) { ?>
-							<ul class='nav navbar-nav'>
-								<li><a href='#'>Administrar Usuarios</a></li>
-							</ul>
-							<ul class='nav navbar-nav navbar-right'>
-								<li><a href='logout.php'>Cerrar Sesi&oacute;n</a></li>
-							</ul>
-							<br>
-								<table class="table table-dark container tablita">
+
+								<li class='nav-item'><a class="nav-link" href='#'>Administrar Usuarios</a></li>
+
+								<li class='nav-item'><a class="nav-link" href='logout.php'>Cerrar Sesi&oacute;n</a></li>
+
+								<table class="table table-hover table-striped">
 									<thead>
 										<tr>
 											<th scope="col">DATE</th>
@@ -98,6 +78,7 @@
 											<th scope="col">DAILY LOAD</th>
 										</tr>
 									</thead>
+
 									<tbody>
 
 									<?php
@@ -128,9 +109,10 @@
 										} else {
 											$row3["loads"] = 'NO';
 										}
+
 										echo '<tr>';
 												echo'<th scope="col">'.$row3["date"].'</th>';
-												echo'<th scope="col">'.$row3["nombre"].'</th>';
+												echo'<th id="nombre" scope="col">'.$row3["nombre"].'</th>';
 												echo'<th scope="col">'.$row3["calls"].'</th>';
 												echo'<th scope="col">'.$row3["leads"].'</th>';
 												echo'<th scope="col">'.$row3["followup"].'</th>';
@@ -139,29 +121,28 @@
 										echo '</tr>';
 									}
 									?>
-									</tbody>
+								</ul>
+								</tbody>
+
 								</table>
-							</ul>
 						<?php } else {?>
 
-								<li><a href="#">Ver mi Perfil</a></li>
-							<ul class='nav navbar-nav navbar-right'>
-								<li><a href='logout.php'>Cerrar Sesi&oacute;n</a></li>
-							</ul>
-								<div class="jumbotron">
-									<h2><?php echo 'Bienvenid@ '.utf8_decode($row['nombre']).'Today '."El id es: ".$row['id']." La fecha es ".$fecha_hoy; ?></h1>
-								<?php /*Condicion de Fecha para Brokers*/ ?>
-								<?php	//if (date("Y-m-d") == $fecha_hoy) { ?>
+								<li class="nav-item"><a class="nav-link" href="#">Ver mi Perfil</a></li>
+
+								<li class="nav-item"><a class="nav-link" href='logout.php'>Cerrar Sesi&oacute;n</a></li>
+
+								<div class="jumbotron brokers">
+
+									<!--h4><?php //echo 'Bienvenid@ '.$row['nombre'] ?></h4-->
 
 									<?php /*Condicion ¿Se hizo el registro del trabajo? para Brokers*/ ?>
-								<?php echo $sql2; ?>
 								<?php if (($row2['id_usuario'] <> $idUsuario) OR ($row2['date'] <> $fecha_hoy)) {?>
-
-										<form action="comprobar.php" method="post">
-											<table class="table table-dark container tablita">
+											<h1>Daily Goals! from <?php echo utf8_decode($row['nombre']); ?></h1>
+											<br>
+											<table id="redondeo" class="table table-responsive table-borderless table-striped table-light">
+												<form action="comprobar.php" method="post">
 												<thead>
 													<tr>
-														<th scope="col">BROKER</th>
 														<th scope="col">100 DAILY CALLS</th>
 														<th scope="col">50 DAILY LEADS</th>
 														<th scope="col">20 FOLLOW UP</th>
@@ -169,26 +150,54 @@
 														<th scope="col">DAILY LOAD</th>
 													</tr>
 												</thead>
-												<tbody>
 													<tr>
-														<th scope="row"><?php echo utf8_decode($row['nombre']); ?></th>
-																<td><input type="checkbox" name="calls" value="1" id="myCheckbox"></td>
+														<!--th scope="row" id="nombre"><?php // echo utf8_decode($row['nombre']); ?></th-->
+																<td>
+																	<div class="custom-control custom-switch">
+																	<input type="checkbox" name="calls" value="1" class="custom-control-input" id="myCheckbox">
+																	<label class="custom-control-label" for="myCheckbox">Done</label>
+																	</div>
+																</td>
+																<td>
+																	<div class="custom-control custom-switch">
+																	<input type="checkbox" name="leads" value="1" class="custom-control-input" id="myCheckbox2">
+																	<label class="custom-control-label" for="myCheckbox2">Done</label>
+																	</div>
+																</td>
+																<td>
+																	<div class="custom-control custom-switch">
+																	<input type="checkbox" name="followup" value="1" class="custom-control-input" id="myCheckbox3">
+																	<label class="custom-control-label" for="myCheckbox3">Done</label>
+																	</div>
+																</td>
+																<td>
+																	<div class="custom-control custom-switch">
+																	<input type="checkbox" name="mails" value="1" class="custom-control-input" id="myCheckbox4">
+																	<label class="custom-control-label" for="myCheckbox4">Done</label>
+																	</div>
+																</td>
+																<td>
+																	<div class="custom-control custom-switch">
+																	<input type="checkbox" name="loads" value="1" class="custom-control-input" id="tc">
+																	<label class="custom-control-label" for="tc">Done</label>
+																	</div>
+																</td>
+																<!--td><input type="checkbox" name="leads" value="1" id="myCheckbox"></td>
 																<td><input type="checkbox" name="leads" value="1" id="myCheckbox2"></td>
 																<td><input type="checkbox" name="followup" value="1" id="myCheckbox3"></td>
 																<td><input type="checkbox" name="mails" value="1" id="myCheckbox4"></td>
-																<td><input type="checkbox" name="loads" value="1" id="tc"></td>
-																<td><input type="submit" name="enviar" value="SUBMIT"></td>
+																<td><input type="checkbox" name="loads" value="1" id="tc"></td-->
+																<td><input class="btn btn-primary btn-sm" type="submit" name="enviar" value="SUBMIT"></td>
 															</tr>
 												</tbody>
+											</form>
 											</table>
 										<?php } else {?>
 										<h1>YA HICISTE TU REGISTRO EN LA BASE DE DATOS</h1>
 									<?php } ?>
 								<?php// } ?>
 							<?php } ?>
-
-					</div>
-				</div>
+							</div>
 			</nav>
 
 						<script type="text/javascript">
@@ -207,9 +216,7 @@
 						}
 						});
 						</script>
-					</form>
 				<br />
-			</div>
 		</div>
 	</body>
 </html>
