@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-01-2019 a las 23:06:49
+-- Tiempo de generación: 05-02-2019 a las 20:52:12
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 5.6.40
 
@@ -48,7 +48,7 @@ INSERT INTO `tipo_usuario` (`id`, `tipo`) VALUES
 --
 
 CREATE TABLE `trabajo` (
-  `id` int(11) NOT NULL,
+  `id_trabajo` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `calls` int(1) NOT NULL,
   `leads` int(1) NOT NULL,
@@ -62,13 +62,16 @@ CREATE TABLE `trabajo` (
 -- Volcado de datos para la tabla `trabajo`
 --
 
-INSERT INTO `trabajo` (`id`, `id_usuario`, `calls`, `leads`, `followup`, `mails`, `loads`, `date`) VALUES
-(1, 2, 1, 1, 1, 1, 1, '2019-01-28'),
-(2, 2, 0, 0, 1, 1, 0, '2019-01-29'),
-(4, 2, 1, 1, 1, 1, 1, '2019-01-30'),
-(5, 2, 1, 1, 0, 0, 0, '2019-01-27'),
-(6, 2, 1, 1, 1, 1, 1, '2019-01-26'),
-(10, 2, 1, 1, 1, 1, 1, '2019-01-31');
+INSERT INTO `trabajo` (`id_trabajo`, `id_usuario`, `calls`, `leads`, `followup`, `mails`, `loads`, `date`) VALUES
+(1, 3, 1, 1, 1, 1, 1, '2019-01-10'),
+(2, 2, 1, 1, 1, 1, 1, '2019-02-03'),
+(3, 1, 1, 0, 1, 1, 1, '2019-02-01'),
+(4, 2, 1, 0, 1, 1, 1, '2019-02-03'),
+(5, 4, 0, 0, 0, 1, 0, '2019-02-03'),
+(6, 2, 0, 1, 0, 0, 0, '2019-02-04'),
+(7, 4, 1, 1, 1, 1, 1, '2019-02-04'),
+(8, 2, 0, 0, 0, 0, 0, '2019-02-05'),
+(10, 3, 0, 0, 0, 1, 0, '2019-02-05');
 
 -- --------------------------------------------------------
 
@@ -95,9 +98,10 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `password`, `nombre`, `correo`, `last_session`, `activacion`, `token`, `token_password`, `password_request`, `id_tipo`) VALUES
-(1, 'administracion', '$2y$10$ZZZgvjPCUK2mh67HsBsRHOjeWlpUN3JbPEdv6seKwW5CioocY9PZG', 'Jeshua', 'brayan@tradexusalogistics.com', '2019-01-31 16:52:11', 1, '13d39c7d4184fcccc18d90f70b18beac', '', 0, 1),
-(2, 'jcamilo', '$2y$10$BSet0meH2FGvu7jaNKmizuAqqfPNcdA/CbSI2RCAglE36llmS7h8C', 'Juan Camilo', 'jcamilo@tradexusalogistics.com', '2019-01-31 16:52:27', 1, 'e9be41827c3fab2d444cad992f031762', '', 0, 2),
-(3, 'tony', '$2y$10$xo6EdDIn.o9nloPiarKgGuTPlH4VK591ZMPLVQvElG4PmTcQe.ACe', 'Anthony Manzanilla', 'anthony@tradexusalogistics.com', '2019-01-29 12:47:55', 1, '5cadc0911b9ac12690fb1ab67e08a7ee', '', 0, 2);
+(1, 'admin', '$2y$10$ZZZgvjPCUK2mh67HsBsRHOjeWlpUN3JbPEdv6seKwW5CioocY9PZG', 'Jeshua', 'brayan@tradexusalogistics.com', '2019-02-05 14:31:30', 1, '13d39c7d4184fcccc18d90f70b18beac', '', 0, 1),
+(2, 'jcamilo', '$2y$10$BSet0meH2FGvu7jaNKmizuAqqfPNcdA/CbSI2RCAglE36llmS7h8C', 'Juan Camilo', 'jcamilo@tradexusalogistics.com', '2019-02-05 14:16:27', 1, 'e9be41827c3fab2d444cad992f031762', '', 0, 2),
+(3, 'tony', '$2y$10$xo6EdDIn.o9nloPiarKgGuTPlH4VK591ZMPLVQvElG4PmTcQe.ACe', 'Anthony Manzanilla', 'anthony@tradexusalogistics.com', '2019-02-05 13:31:01', 1, '5cadc0911b9ac12690fb1ab67e08a7ee', '', 0, 2),
+(4, 'tony2', '$2y$10$xo6EdDIn.o9nloPiarKgGuTPlH4VK591ZMPLVQvElG4PmTcQe.ACe', 'Manzanillo', 'anthony@tradexusalogistics.com', '2019-02-05 14:47:32', 1, '5cadc0911b9ac12690fb1ab67e08a7ee', '', 0, 2);
 
 --
 -- Índices para tablas volcadas
@@ -113,7 +117,7 @@ ALTER TABLE `tipo_usuario`
 -- Indices de la tabla `trabajo`
 --
 ALTER TABLE `trabajo`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`id_trabajo`),
   ADD KEY `id_usuario` (`id_usuario`);
 
 --
@@ -136,13 +140,13 @@ ALTER TABLE `tipo_usuario`
 -- AUTO_INCREMENT de la tabla `trabajo`
 --
 ALTER TABLE `trabajo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_trabajo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
