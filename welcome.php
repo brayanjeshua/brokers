@@ -206,20 +206,18 @@
 							<?php } ?>
 
 
-<div id="correos" style='display:block'>
-<style media="screen">
-/*Hacer Estilos para Iframe*/
-</style>
-							<iframe src="validamails.php?user=<?php echo $idUsuario ?>" frameborder="no" width="98%" height="350"></iframe>
-
+						<div id="container correos">
+								<br>
+								<h3 class="h4">Ingresa los correos</h3>
+								<iframe src="validamails.php?user=<?php echo $idUsuario ?>" frameborder="none" width="350" height="300"></iframe>
 									<div id="listamails">
 											<?php
 
-											function getData($idUsuario) {
+										function getData($idUsuario) {
 										 $parameters = array();
 										 $arr_results = array();
 
-										 $db = new mysqli('localhost', 'root', '', 'works') or die('Database connection failed');
+										 $db = new mysqli('localhost', 'root', 'root', 'works') or die('Database connection failed');
 										 $stmt = $db->prepare("SELECT mail FROM mails WHERE id_usuario=$idUsuario") or die('Something wrong with prepare query');
 										 $stmt->execute();
 
@@ -265,7 +263,7 @@
 									echo "<div>";
 
 											 ?>
-
+										 </div>
 									</div>
 
 
@@ -288,9 +286,6 @@
 						}
 						});
 						</script>
-				<br />
-
-		</div>
 </div>
 
 	</body>

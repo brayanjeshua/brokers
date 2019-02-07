@@ -50,13 +50,10 @@ if(isset($_POST['emls']) and $_POST['emls']<>""){
         echo "<br><hr>Malos=$malos<br> Ingresos= $nuevos<br> Repetidos=$repetidos";
     echo "</div>";
 }
-
-
-
  ?>
-<br><br>
-
  <form class="" action="#" method="post">
-   <textarea name="emls" id="emls" rows="12" cols="40"></textarea>
+   <div class="form-group">
+   <textarea placeholder="correo@co" name="emls" id="emls" rows="8" cols="40"></textarea>
   <br> <button type="submit" name="button">Validar</button>
+</div>
  </form>
