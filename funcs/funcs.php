@@ -60,6 +60,25 @@
 		}
 	}
 
+	function emailExiste2($email)
+	{
+		global $mysqli;
+
+		$stmt = $mysqli->prepare("SELECT id FROM mails WHERE mail = ? LIMIT 1");
+		$stmt->bind_param("s", $email);
+		$stmt->execute();
+		$stmt->store_result();
+		$num = $stmt->num_rows;
+		$stmt->close();
+
+		if ($num > 0){
+			return true;
+			} else {
+			return false;
+		}
+	}
+
+
 	function emailExiste($email)
 	{
 		global $mysqli;
@@ -104,6 +123,21 @@
 			echo "</div>";
 		}
 	}
+
+	function registraMail($usuario,$email){
+
+		global $mysqli;
+
+		$stmt = $mysqli->prepare("INSERT INTO mails (id_usuario, mail) VALUES(?,?)");
+		$stmt->bind_param('is', $usuario, $email);
+
+		if ($stmt->execute()){
+			return $mysqli->insert_id;
+			} else {
+			return 0;
+		}
+	}
+
 
 	function registraUsuario($usuario, $pass_hash, $nombre, $email, $activo, $token, $tipo_usuario){
 
@@ -234,6 +268,18 @@ function enviarEmail($email, $nombre, $asunto, $cuerpo){
 		}
 		return $errors;
 	}
+
+
+	function listamails($id)	{
+		// global $mysqli;
+		// $stmt = $mysqli->prepare("SELECT mail FROM mails WHERE id_user = ?");
+		// $stmt->bind_param('s', $mail);
+		// $stmt->execute();
+		// $stmt->bind_result($mails);
+		// $stmt->fetch();
+	}
+
+
 
 	function lastSession($id)
 	{

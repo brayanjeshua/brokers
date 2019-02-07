@@ -24,9 +24,14 @@
 	$row2 = $result2->fetch_assoc();
 
 	/*Consulta para leer base de datos de Trabajo*/
-	$sql3 = "SELECT * FROM trabajo t INNER JOIN usuarios u ON t.id_usuario = u.id ORDER BY t.date";
-	$result3 = mysqli_query($mysqli,$sql3);
 
+	// $sql3 = "SELECT date,nombre,calls,leads,followup,mails,loads
+	// 				FROM trabajo t INNER JOIN usuarios u ON t.id_usuario = u.id ORDER BY t.date";
+	// $result3 = mysqli_query($mysqli,$sql3);
+
+	$query = "SELECT date,nombre,calls,leads,followup,mails,loads
+					FROM trabajo t INNER JOIN usuarios u ON t.id_usuario = u.id ORDER BY t.date";
+	$result3 = $mysqli->query($query);
 
 	/*Consulta para Fechas*/
 	$sql4 = "SELECT date FROM trabajo";
@@ -53,7 +58,7 @@
 
 		<div class="container">
 
-			<nav class='navbar'>
+			 <nav class='navbar'>
 
 						<ul class='nav nav-tabs justify-content-center'>
 
@@ -82,44 +87,51 @@
 									<tbody>
 
 									<?php
-									while($row3 = $result3->fetch_assoc()){
 
-										if ($row3["calls"] == 1 ) {
-											$row3["calls"] = 'SI';
-										} else {
-											$row3["calls"] = 'NO';
-										}
-										if ($row3["leads"] == 1 ) {
-											$row3["leads"] = 'SI';
-										} else {
-											$row3["leads"] = 'NO';
-										}
-										if ($row3["followup"] == 1 ) {
-											$row3["followup"] = 'SI';
-										} else {
-											$row3["followup"] = 'NO';
-										}
-										if ($row3["mails"] == 1 ) {
-											$row3["mails"] = 'SI';
-										} else {
-											$row3["mails"] = 'NO';
-										}
-										if ($row3["loads"] == 1 ) {
-											$row3["loads"] = 'SI';
-										} else {
-											$row3["loads"] = 'NO';
-										}
 
-										echo '<tr>';
-												echo'<th scope="col">'.$row3["date"].'</th>';
-												echo'<th id="nombre" scope="col">'.$row3["nombre"].'</th>';
-												echo'<th scope="col">'.$row3["calls"].'</th>';
-												echo'<th scope="col">'.$row3["leads"].'</th>';
-												echo'<th scope="col">'.$row3["followup"].'</th>';
-												echo'<th scope="col">'.$row3["mails"].'</th>';
-												echo'<th scope="col">'.$row3["loads"].'</th>';
-										echo '</tr>';
-									}
+
+										while($row = $result3->fetch_array()){	$rows[] = $row;	}
+													$fechaw = $rows[0]['date'];
+
+
+													if ($rows[0]["calls"] == 1 ) {$rows[0]["calls"] = 'SI';} else {$rows[0]["calls"] = 'NO';}
+													if ($rows[0]["leads"] == 1 ) {$rows[0]["leads"] = 'SI';} else {$rows[0]["leads"] = 'NO';}
+													if ($rows[0]["followup"] == 1 ) {$rows[0]["followup"] = 'SI';} else {$rows[0]["followup"] = 'NO';}
+													if ($rows[0]["mails"] == 1 ) {$rows[0]["mails"] = 'SI';} else {$rows[0]["mails"] = 'NO';}
+													if ($rows[0]["loads"] == 1 ) {$rows[0]["loads"] = 'SI';} else {$rows[0]["loads"] = 'NO';}
+
+													echo "<tr><td>".$rows[0]['date']."</td>";
+													echo "<td>".$rows[0]['nombre']."</td>";
+													echo "<td>".$rows[0]['calls']."</td>";
+													echo "<td>".$rows[0]['leads']."</td>";
+													echo "<td>".$rows[0]['followup']."</td>";
+													echo "<td>".$rows[0]['mails']."</td>";
+													echo "<td>".$rows[0]['loads']."</td></tr>";
+
+												for ($i=1; $i < sizeof($rows) ; $i++) {
+
+													if ($rows[$i]["calls"] == 1 ) {$rows[$i]["calls"] = 'SI';} else {$rows[$i]["calls"] = 'NO';}
+													if ($rows[$i]["leads"] == 1 ) {$rows[$i]["leads"] = 'SI';} else {$rows[$i]["leads"] = 'NO';}
+													if ($rows[$i]["followup"] == 1 ) {$rows[$i]["followup"] = 'SI';} else {$rows[$i]["followup"] = 'NO';}
+													if ($rows[$i]["mails"] == 1 ) {$rows[$i]["mails"] = 'SI';} else {$rows[$i]["mails"] = 'NO';}
+													if ($rows[$i]["loads"] == 1 ) {$rows[$i]["loads"] = 'SI';} else {$rows[$i]["loads"] = 'NO';}
+
+															$fechax = $rows[$i]['date'];
+
+																if ($fechax !== $fechaw) {
+																	$fechaw = $rows[$i]['date'];
+																	echo "<tr><td colspan='7'>.</td></tr>";
+																}
+
+																echo "<tr><td>".$rows[$i]['date']."</td>";
+																echo "<td>".$rows[$i]['nombre']."</td>";
+																echo "<td>".$rows[$i]['calls']."</td>";
+																echo "<td>".$rows[$i]['leads']."</td>";
+																echo "<td>".$rows[$i]['followup']."</td>";
+																echo "<td>".$rows[$i]['mails']."</td>";
+																echo "<td>".$rows[$i]['loads']."</td></tr>";
+
+												}
 									?>
 								</ul>
 								</tbody>
@@ -182,11 +194,6 @@
 																	<label class="custom-control-label" for="tc">Done</label>
 																	</div>
 																</td>
-																<!--td><input type="checkbox" name="leads" value="1" id="myCheckbox"></td>
-																<td><input type="checkbox" name="leads" value="1" id="myCheckbox2"></td>
-																<td><input type="checkbox" name="followup" value="1" id="myCheckbox3"></td>
-																<td><input type="checkbox" name="mails" value="1" id="myCheckbox4"></td>
-																<td><input type="checkbox" name="loads" value="1" id="tc"></td-->
 																<td><input class="btn btn-primary btn-sm" type="submit" name="enviar" value="SUBMIT"></td>
 															</tr>
 												</tbody>
@@ -197,6 +204,71 @@
 									<?php } ?>
 								<?php// } ?>
 							<?php } ?>
+
+
+<div id="correos" style='display:block'>
+<style media="screen">
+/*Hacer Estilos para Iframe*/
+</style>
+							<iframe src="validamails.php?user=<?php echo $idUsuario ?>" frameborder="no" width="98%" height="350"></iframe>
+
+									<div id="listamails">
+											<?php
+
+											function getData($idUsuario) {
+										 $parameters = array();
+										 $arr_results = array();
+
+										 $db = new mysqli('localhost', 'root', '', 'works') or die('Database connection failed');
+										 $stmt = $db->prepare("SELECT mail FROM mails WHERE id_usuario=$idUsuario") or die('Something wrong with prepare query');
+										 $stmt->execute();
+
+										 $meta = $stmt->result_metadata();
+
+										 while ( $rows = $meta->fetch_field() ) {
+
+											 $parameters[] = &$row[$rows->name];
+										 }
+
+										 call_user_func_array(array($stmt, 'bind_result'), $parameters);
+
+										 while ( $stmt->fetch() ) {
+												$x = array();
+												foreach( $row as $key => $val ) {
+													 $x[$key] = $val;
+												}
+												$arr_results[] = $x;
+										 }
+
+										 return $arr_results;
+										}
+
+											$arr_results = getData($idUsuario);
+
+									echo "<div style='width:300px;height:200px;overflow:auto'>";
+										echo
+									"<table class='table table-borderless table-striped'>
+										<thead class='thead-dark'>
+											<tr>
+												<th>Lastest Mails</th>
+											</tr>
+										</thead>";
+											 foreach ($arr_results as $row) :
+												  echo
+												"<tbody>
+														<tr>
+															<td style='text-align:left'>".$row['mail']."</td>
+														</tr>
+													</tbody>";
+											 endforeach;
+											echo "</table>";
+									echo "<div>";
+
+											 ?>
+
+									</div>
+
+
 							</div>
 			</nav>
 
@@ -217,6 +289,23 @@
 						});
 						</script>
 				<br />
+
 		</div>
+</div>
+
 	</body>
+
+	<?php
+	//$mysqli = new mysqli("localhost", "mi_usuario", "mi_contraseña", "world");
+
+	/* comprobar la conexión */
+	if (mysqli_connect_errno()) {
+	    printf("Falló la conexión: %s\n", mysqli_connect_error());
+	    exit();
+	}
+
+
+
+//	$mysqli->close();
+	 ?>
 </html>
