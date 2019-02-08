@@ -34,11 +34,11 @@
 	<link rel="stylesheet" href="css/estilos.css">
 	</head>
 
-	<body>
+	<body class="body-custom">
 		<div class="container main">
 
 			<div class="col-12 imagen">
-				<img src="img/truck-login.png" class="col-lg-6 col-4 rounded float-right">
+				<img src="img/miami-login.png" class="col-lg-6 col-4 rounded float-right">
 			</div>
 
 			<div class="mainbox col-lg-6 col-12">

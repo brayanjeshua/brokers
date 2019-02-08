@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
-
-body {
+* {
+  margin:0;
+  padding:0;
+  border:0;
+}
+.body-custom {
   background-color:rgb(70, 75, 121);
   padding-top: 20px;
   padding-bottom: 20px;
@@ -48,3 +52,43 @@ td,th, tr {
   text-align:center;
 }
 #redondeo { border-radius:10px; }
+
+.btnmails-mails{color:#fff;background-color:#000;border-color:#2e6da4}
+.btnmails-mails.focus,.btnmails-mails:focus{color:#fff;background-color:#286090;border-color:#122b40}
+.btnmails-mails:hover{color:#fff;background-color:#286090;border-color:#204d74}
+.btnmails{display:inline-block;margin-bottom:0;font-weight:400;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;background-image:none;border:1px solid transparent;padding:6px 12px;font-size:14px;line-height:1.42857143;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+
+.btnmails {
+  margin:10px;
+  padding:3px 50px 3px 50px;
+}
+.h3-mails {
+  font-weight:500;
+  margin-bottom:10px;
+  font-family:'Raleway';
+}
+.validate-mails {
+  width:96%;
+  padding:2%;
+  background-color:#fff;
+}
+.thead-dark {
+  padding:20px !important;
+}
+table.mails {
+  width:100%;
+  padding:5%;
+  background-color:#ccc;
+  color:rgb(70, 75, 121);
+  overflow:hidden !important;
+}
+table.mails thead {
+  padding:20px !important;
+}
+.textomails {
+  font-size:1em !important;
+}
+textarea {
+  font-size:1em !important;
+  padding:3px;
+}

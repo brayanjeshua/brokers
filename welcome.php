@@ -54,7 +54,7 @@
 	<link rel="stylesheet" href="css/estilos.css">
 	</head>
 
-	<body>
+	<body class="body-custom">
 
 		<div class="container">
 
@@ -206,19 +206,20 @@
 							<?php } ?>
 
 
-						<div id="container correos">
-								<br>
-								<h3 class="h4">Ingresa los correos</h3>
-								<iframe src="validamails.php?user=<?php echo $idUsuario ?>" frameborder="none" width="350" height="300"></iframe>
-									<div id="listamails">
-											<?php
+						<div class="container" id="correos">
+							<div class="row">
+<div class="col">
+	<iframe src="validamails.php?user=<?php echo $idUsuario ?>" frameborder="0" width="300" height="250" align="middle" draggable="auto">Cambia tu Dispositivo, está muy viejo.</iframe>
+</div>
+<div class="col" id="listamails">
+										<?php
 
 										function getData($idUsuario) {
 										 $parameters = array();
 										 $arr_results = array();
 
-										 $db = new mysqli('localhost', 'root', 'root', 'works') or die('Database connection failed');
-										 $stmt = $db->prepare("SELECT mail FROM mails WHERE id_usuario=$idUsuario") or die('Something wrong with prepare query');
+										 $db = new mysqli('localhost', 'root', '', 'works') or die('Database connection failed');
+										 $stmt = $db->prepare("SELECT mail FROM mails WHERE id_usuario=$idUsuario ") or die('Something wrong with prepare query');
 										 $stmt->execute();
 
 										 $meta = $stmt->result_metadata();
@@ -243,7 +244,7 @@
 
 											$arr_results = getData($idUsuario);
 
-									echo "<div style='width:300px;height:200px;overflow:auto'>";
+									echo "<div class='col' style='width:300px;height:200px;overflow:auto'>";
 										echo
 									"<table class='table table-borderless table-striped'>
 										<thead class='thead-dark'>
@@ -260,14 +261,16 @@
 													</tbody>";
 											 endforeach;
 											echo "</table>";
-									echo "<div>";
-
+									echo "</div>"
 											 ?>
-										 </div>
+
 									</div>
 
 
 							</div>
+
+			</div>
+
 			</nav>
 
 						<script type="text/javascript">
