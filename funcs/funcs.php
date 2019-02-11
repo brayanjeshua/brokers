@@ -154,20 +154,25 @@
 	}
 
 function enviarEmail($email, $nombre, $asunto, $cuerpo){
-/* Configurar Email pendiente
+/* Configurar Email pendiente*/
 		require_once 'PHPMailer/PHPMailerAutoload.php';
 
 		$mail = new PHPMailer();
-		$mail->isSMTP();
+		$mail->SMTPDebug = 3;
+		//$mail->isSMTP();
+		$mail->Host = "smtp.gmail.com";
+		$mail->Port = 587;
 		$mail->SMTPAuth = true;
-		$mail->SMTPSecure = 'tipo de seguridad'; //Modificar
-		$mail->Host = 'dominio'; //Modificar
-		$mail->Port = puerto; //Modificar
+		$mail->SMTPSecure = 'tls';
+		//$mail->SMTPAuth = true;
+		//$mail->SMTPSecure = "SSL"; //Modificar
+		//$mail->Host = 'smtp.gmail.com'; //Modificar
+		//$mail->Port = 465; //Modificar
 
-		$mail->Username = 'correo emisor'; //Modificar
-		$mail->Password = 'password de correo emisor'; //Modificar
+		$mail->Username = 'tradexusalogistics@gmail.com'; //Modificar
+		$mail->Password = 'ADMINSDK123!'; //Modificar
 
-		$mail->setFrom('correo emisor', 'nombre de correo emisor'); //Modificar
+		$mail->setFrom('tradexusalogistics@gmail.com', 'Tradex USA'); //Modificar
 		$mail->addAddress($email, $nombre);
 
 		$mail->Subject = $asunto;
@@ -177,7 +182,7 @@ function enviarEmail($email, $nombre, $asunto, $cuerpo){
 		if($mail->send())
 		return true;
 		else
-		return false;*/
+		return false;
 	}
 
 	function validaIdToken($id, $token){
@@ -194,16 +199,16 @@ function enviarEmail($email, $nombre, $asunto, $cuerpo){
 			$stmt->fetch();
 
 			if($activacion == 1){
-				$msg = "La cuenta ya se activo anteriormente.";
+				$msg = "Account has already been activated";
 				} else {
 				if(activarUsuario($id)){
-					$msg = 'Cuenta activada.';
+					$msg = 'Activated Account';
 					} else {
-					$msg = 'Error al Activar Cuenta';
+					$msg = 'Account Activation Error';
 				}
 			}
 			} else {
-			$msg = 'No existe el registro para activar.';
+			$msg = 'Activation Register does not exist';
 		}
 		return $msg;
 	}
@@ -258,13 +263,13 @@ function enviarEmail($email, $nombre, $asunto, $cuerpo){
 					header("location: welcome.php");
 					} else {
 
-					$errors = "La contrase&ntilde;a es incorrecta";
+					$errors = "Incorrect Password";
 				}
 				} else {
-				$errors = 'El usuario no esta activo';
+				$errors = 'User is not active yet';
 			}
 			} else {
-			$errors = "El nombre de usuario o correo electr&oacute;nico no existe";
+			$errors = "User name or e-mail address does not exist";
 		}
 		return $errors;
 	}

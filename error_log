@@ -1,0 +1,220 @@
+[08-Feb-2019 21:55:58 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pablo201/public_html/dailygoals/funcs/conexion.php on line 3
+[08-Feb-2019 22:00:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home/pablo201/public_html/dailygoals/funcs/funcs.php:238
+Stack trace:
+#0 /home/pablo201/public_html/dailygoals/index.php(23): login('admin', '123')
+#1 {main}
+  thrown in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 238
+[08-Feb-2019 22:05:37 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[08-Feb-2019 22:05:38 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pablo201/public_html/dailygoals/welcome.php on line 221
+[08-Feb-2019 22:05:38 UTC] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/pablo201/public_html/dailygoals/welcome.php on line 222
+[08-Feb-2019 22:05:49 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[08-Feb-2019 22:05:49 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[08-Feb-2019 22:05:49 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pablo201/public_html/dailygoals/welcome.php on line 221
+[08-Feb-2019 22:05:49 UTC] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/pablo201/public_html/dailygoals/welcome.php on line 222
+[08-Feb-2019 22:05:53 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[08-Feb-2019 22:05:53 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pablo201/public_html/dailygoals/welcome.php on line 221
+[08-Feb-2019 22:05:53 UTC] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/pablo201/public_html/dailygoals/welcome.php on line 222
+[08-Feb-2019 22:06:53 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[08-Feb-2019 22:06:53 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[08-Feb-2019 22:06:53 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pablo201/public_html/dailygoals/welcome.php on line 221
+[08-Feb-2019 22:06:53 UTC] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/pablo201/public_html/dailygoals/welcome.php on line 222
+[08-Feb-2019 22:10:57 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[08-Feb-2019 22:10:57 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pablo201/public_html/dailygoals/welcome.php on line 221
+[08-Feb-2019 22:10:57 UTC] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/pablo201/public_html/dailygoals/welcome.php on line 222
+[08-Feb-2019 22:11:13 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[08-Feb-2019 22:11:21 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[08-Feb-2019 22:11:21 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[08-Feb-2019 22:11:39 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[08-Feb-2019 22:11:43 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[08-Feb-2019 22:12:32 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[08-Feb-2019 22:12:33 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[08-Feb-2019 22:12:49 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[08-Feb-2019 22:13:00 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[08-Feb-2019 22:13:09 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[08-Feb-2019 22:14:35 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[08-Feb-2019 22:17:11 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[08-Feb-2019 22:20:39 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[08-Feb-2019 22:20:39 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[08-Feb-2019 22:20:49 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[08-Feb-2019 22:47:26 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[08-Feb-2019 22:59:31 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 00:29:40 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 00:29:41 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 01:03:19 UTC] PHP Notice:  Undefined index: id_usuario in /home/pablo201/public_html/dailygoals/welcome.php on line 11
+[09-Feb-2019 01:03:19 UTC] PHP Notice:  Undefined index: tipo_usuario in /home/pablo201/public_html/dailygoals/welcome.php on line 68
+[09-Feb-2019 01:03:19 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 03:02:51 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 03:03:22 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 03:03:23 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 03:03:43 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 03:03:48 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 03:04:38 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 03:04:53 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 03:05:01 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 03:14:20 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 03:14:33 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 03:14:34 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 03:15:27 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 03:15:27 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 03:22:02 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 03:22:24 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 12:48:44 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 12:48:45 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 13:03:43 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 13:04:08 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 13:09:03 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 13:09:30 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 13:09:43 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 13:09:43 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 13:09:49 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 13:15:27 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 13:20:21 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 13:29:06 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 13:29:24 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 13:42:02 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ')' in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 177
+[09-Feb-2019 13:42:06 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ')' in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 177
+[09-Feb-2019 13:42:08 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ')' in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 177
+[09-Feb-2019 13:42:10 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ')' in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 177
+[09-Feb-2019 13:42:43 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ')' in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 177
+[09-Feb-2019 13:42:57 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ')' in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 177
+[09-Feb-2019 13:43:04 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ')' in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 177
+[09-Feb-2019 13:43:15 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ')' in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 177
+[09-Feb-2019 13:46:15 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 181
+[09-Feb-2019 13:46:17 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 181
+[09-Feb-2019 13:46:37 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 181
+[09-Feb-2019 13:49:13 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 13:53:48 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ')' in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 170
+[09-Feb-2019 13:54:43 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 14:04:42 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 14:11:47 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 14:32:37 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 14:32:38 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 14:33:54 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 14:38:07 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 14:38:08 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 14:50:32 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 14:56:43 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 14:56:44 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 14:57:35 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 15:04:46 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 15:04:47 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 15:05:33 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 205
+[09-Feb-2019 15:07:55 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 206
+[09-Feb-2019 15:08:29 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 206
+[09-Feb-2019 15:08:54 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 206
+[09-Feb-2019 15:12:45 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[09-Feb-2019 15:13:01 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[09-Feb-2019 15:13:22 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[09-Feb-2019 15:13:58 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 15:13:58 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[09-Feb-2019 15:15:37 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 15:15:38 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[09-Feb-2019 15:16:06 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[09-Feb-2019 15:16:40 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[09-Feb-2019 15:17:52 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[09-Feb-2019 15:18:11 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[09-Feb-2019 15:18:41 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[09-Feb-2019 15:19:06 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[09-Feb-2019 15:26:26 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 15:26:52 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 269
+[09-Feb-2019 15:26:52 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[09-Feb-2019 15:29:32 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[09-Feb-2019 16:03:21 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 16:07:50 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 16:12:23 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 16:31:20 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 16:32:01 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 16:42:21 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 161
+[09-Feb-2019 16:42:24 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 161
+[09-Feb-2019 16:42:37 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 161
+[09-Feb-2019 16:42:38 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 161
+[09-Feb-2019 16:42:39 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 161
+[09-Feb-2019 16:42:56 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 161
+[09-Feb-2019 16:43:00 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 161
+[09-Feb-2019 16:43:02 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 161
+[09-Feb-2019 16:43:55 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 16:43:55 UTC] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php:1469
+Stack trace:
+#0 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1552): PHPMailer->getSMTPInstance()
+#1 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1489): PHPMailer->smtpConnect(Array)
+#2 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1326): PHPMailer->smtpSend('Date: Sat, 9 Fe...', 'Hi jeshasdasd: ...')
+#3 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1206): PHPMailer->postSend()
+#4 /home/pablo201/public_html/dailygoals/funcs/funcs.php(181): PHPMailer->send()
+#5 /home/pablo201/public_html/dailygoals/registro.php(59): enviarEmail('brayanjeshuavz@...', 'jeshasdasd', 'Activate Accoun...', 'Hi jeshasdasd: ...')
+#6 {main}
+  thrown in /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php on line 1469
+[09-Feb-2019 16:58:51 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 16:58:51 UTC] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php:1469
+Stack trace:
+#0 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1552): PHPMailer->getSMTPInstance()
+#1 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1489): PHPMailer->smtpConnect(Array)
+#2 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1326): PHPMailer->smtpSend('Date: Sat, 9 Fe...', 'Hi jeshasdasd: ...')
+#3 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1206): PHPMailer->postSend()
+#4 /home/pablo201/public_html/dailygoals/funcs/funcs.php(182): PHPMailer->send()
+#5 /home/pablo201/public_html/dailygoals/registro.php(59): enviarEmail('brayanjeshuavz@...', 'jeshasdasd', 'Activate Accoun...', 'Hi jeshasdasd: ...')
+#6 {main}
+  thrown in /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php on line 1469
+[09-Feb-2019 16:59:27 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 16:59:27 UTC] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php:1469
+Stack trace:
+#0 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1552): PHPMailer->getSMTPInstance()
+#1 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1489): PHPMailer->smtpConnect(Array)
+#2 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1326): PHPMailer->smtpSend('Date: Sat, 9 Fe...', 'Hi asa: <br /><...')
+#3 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1206): PHPMailer->postSend()
+#4 /home/pablo201/public_html/dailygoals/funcs/funcs.php(182): PHPMailer->send()
+#5 /home/pablo201/public_html/dailygoals/registro.php(59): enviarEmail('brayanjeshuavz@...', 'asa', 'Activate Accoun...', 'Hi asa: <br /><...')
+#6 {main}
+  thrown in /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php on line 1469
+[09-Feb-2019 21:04:06 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[09-Feb-2019 21:04:06 UTC] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php:1469
+Stack trace:
+#0 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1552): PHPMailer->getSMTPInstance()
+#1 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1489): PHPMailer->smtpConnect(Array)
+#2 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1326): PHPMailer->smtpSend('Date: Sat, 9 Fe...', 'Hi bra: <br /><...')
+#3 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1206): PHPMailer->postSend()
+#4 /home/pablo201/public_html/dailygoals/funcs/funcs.php(182): PHPMailer->send()
+#5 /home/pablo201/public_html/dailygoals/registro.php(59): enviarEmail('natypastelbogot...', 'bra', 'Activate Accoun...', 'Hi bra: <br /><...')
+#6 {main}
+  thrown in /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php on line 1469
+[10-Feb-2019 00:53:58 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 274
+[10-Feb-2019 00:53:58 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[10-Feb-2019 00:54:52 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[10-Feb-2019 00:54:53 UTC] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php:1469
+Stack trace:
+#0 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1552): PHPMailer->getSMTPInstance()
+#1 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1489): PHPMailer->smtpConnect(Array)
+#2 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1326): PHPMailer->smtpSend('Date: Sun, 10 F...', 'Hi as: <br /><b...')
+#3 /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php(1206): PHPMailer->postSend()
+#4 /home/pablo201/public_html/dailygoals/funcs/funcs.php(182): PHPMailer->send()
+#5 /home/pablo201/public_html/dailygoals/registro.php(59): enviarEmail('tradexusalogist...', 'as', 'Activate Accoun...', 'Hi as: <br /><b...')
+#6 {main}
+  thrown in /home/pablo201/public_html/dailygoals/PHPMailer/class.phpmailer.php on line 1469
+[10-Feb-2019 00:56:26 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[10-Feb-2019 17:02:45 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 274
+[10-Feb-2019 17:02:45 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[10-Feb-2019 17:03:30 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 274
+[10-Feb-2019 17:03:51 UTC] PHP Notice:  Undefined index: id_usuario in /home/pablo201/public_html/dailygoals/welcome.php on line 11
+[10-Feb-2019 17:03:51 UTC] PHP Notice:  Undefined index: tipo_usuario in /home/pablo201/public_html/dailygoals/welcome.php on line 68
+[10-Feb-2019 17:03:51 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[11-Feb-2019 02:59:54 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[11-Feb-2019 03:00:24 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[11-Feb-2019 03:06:45 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[11-Feb-2019 03:11:02 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 274
+[11-Feb-2019 03:11:02 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[11-Feb-2019 03:24:38 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[11-Feb-2019 03:44:24 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 274
+[11-Feb-2019 03:44:25 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[11-Feb-2019 13:13:41 UTC] PHP Notice:  Undefined index: id_usuario in /home/pablo201/public_html/dailygoals/welcome.php on line 11
+[11-Feb-2019 13:13:41 UTC] PHP Notice:  Undefined index: tipo_usuario in /home/pablo201/public_html/dailygoals/welcome.php on line 68
+[11-Feb-2019 13:13:41 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[11-Feb-2019 13:13:45 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 274
+[11-Feb-2019 13:13:45 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[11-Feb-2019 13:42:09 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/pablo201/public_html/dailygoals/PHPMailer/PHPMailerAutoload.php on line 45
+[11-Feb-2019 13:43:52 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 274
+[11-Feb-2019 13:43:52 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[11-Feb-2019 13:48:23 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 274
+[11-Feb-2019 13:48:33 UTC] PHP Notice:  Undefined variable: errors in /home/pablo201/public_html/dailygoals/funcs/funcs.php on line 274
+[11-Feb-2019 13:48:34 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[11-Feb-2019 13:52:47 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[11-Feb-2019 13:56:04 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207
+[11-Feb-2019 14:09:11 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/pablo201/public_html/dailygoals/welcome.php on line 207

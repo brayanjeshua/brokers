@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	session_start();
 	require 'funcs/conexion.php';
 	include 'funcs/funcs.php';
@@ -44,7 +44,7 @@
 
 <html>
 	<head>
-		<title>Welcome</title>
+		<title>Daily Goals from <?php echo utf8_decode($row['nombre']); ?> in Tradex Logistics</title>
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"  integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -62,14 +62,14 @@
 
 						<ul class='nav nav-tabs justify-content-center'>
 
-							<li class='nav-item'><a class="nav-link active" href='welcome.php'>Inicio</a></li>
+							<li class='nav-item'><a class="nav-link active" href='#'>Home</a></li>
 
 						<?php /*Condicion para Validar que tipo de Usuario Entra*/ ?>
 						<?php if($_SESSION['tipo_usuario']==1) { ?>
 
-								<li class='nav-item'><a class="nav-link" href='#'>Administrar Usuarios</a></li>
+								<li class='nav-item'><a class="nav-link" href='#'>Manage Users</a></li>
 
-								<li class='nav-item'><a class="nav-link" href='logout.php'>Cerrar Sesi&oacute;n</a></li>
+								<li class='nav-item'><a class="nav-link" href='logout.php'>Log out</a></li>
 
 								<table class="table table-hover table-striped">
 									<thead>
@@ -139,9 +139,9 @@
 								</table>
 						<?php } else {?>
 
-								<li class="nav-item"><a class="nav-link" href="#">Ver mi Perfil</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">View My Profile</a></li>
 
-								<li class="nav-item"><a class="nav-link" href='logout.php'>Cerrar Sesi&oacute;n</a></li>
+								<li class="nav-item"><a class="nav-link" href='logout.php'>Log out</a></li>
 
 								<div class="jumbotron brokers">
 
@@ -200,7 +200,9 @@
 											</form>
 											</table>
 										<?php } else {?>
-										<h1>YA HICISTE TU REGISTRO EN LA BASE DE DATOS</h1>
+										<h1>You are already registered in the Database</h1>
+										<h3 style="text-align:center;">No worries ;)</h3>
+										<br>
 									<?php } ?>
 								<?php// } ?>
 							<?php } ?>

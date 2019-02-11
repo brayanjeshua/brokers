@@ -18,27 +18,27 @@
 
 		if(isNull($nombre, $usuario, $password, $con_password, $email))
 		{
-			$errors[] = "Debe llenar todos los campos";
+			$errors[] = "Must fill all the fields";
 		}
 
 		if(!isEmail($email))
 		{
-			$errors[] = "Dirección de correo inválida";
+			$errors[] = "Invalid e-mail address";
 		}
 
 		if(!validaPassword($password, $con_password))
 		{
-			$errors[] = "Las contraseñas no coinciden";
+			$errors[] = "Passwords do not match";
 		}
 
 		if(usuarioExiste($usuario))
 		{
-			$errors[] = "El nombre de usuario $usuario ya existe";
+			$errors[] = "User name $usuario already exists";
 		}
 
 		if(emailExiste($email))
 		{
-			$errors[] = "El correo electronico $email ya existe";
+			$errors[] = "The email address $email already exists";
 		}
 
 		if(count($errors) == 0)
@@ -51,24 +51,24 @@
 				if($registro > 0 )
 				{
 
-					$url = 'http://'.$_SERVER["SERVER_NAME"].'/login/activar.php?id='.$registro.'&val='.$token;
+					$url = 'https://'.$_SERVER["SERVER_NAME"].'/dailygoals/activar.php?id='.$registro.'&val='.$token;
 
-					$asunto = 'Activar Cuenta - Sistema de Usuarios';
-					$cuerpo = "Estimado $nombre: <br /><br />Para continuar con el proceso de registro, es indispensable de click en la siguiente liga <a href='$url'>Activar Cuenta</a>";
+					$asunto = 'Activate Account - Daily Goals';
+					$cuerpo = "Hi $nombre: <br /><br />To complete the process it is important that you make click here <a href='$url'>Activate Account</a>";
 
 					if(enviarEmail($email, $nombre, $asunto, $cuerpo)){
 
-					echo "Para terminar el proceso de registro siga las instrucciones que le hemos enviado la direccion de correo electronico: $email";
+					echo "To finish the registration process, follow the instructions that we have sent to your email: $email";
 
-					echo "<br><a href='index.php' >Iniciar Sesion</a>";
+					echo "<br><a href='index.php' >Sign In</a>";
 					exit;
 
 					} else {
-						$erros[] = "Error al enviar Email";
+						$erros[] = "Error to sent message";
 					}
 
 					} else {
-					$errors[] = "Error al Registrar";
+					$errors[] = "Error to Register";
 				}
 
 		}
@@ -78,7 +78,7 @@
 ?>
 <html>
 	<head>
-		<title>Registro</title>
+		<title>Register</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"  integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	</head>
 
@@ -89,7 +89,7 @@
 					<div class="panel-heading">
 						<div class="h1">User Register</div>
 					</div>
-					
+
 					<div class="panel-body" >
 
 						<form id="signupform" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" autocomplete="off">
@@ -131,8 +131,8 @@
 
 							<div class="form-group">
 								<div class="col-md-offset-3 col-md-9">
-									<button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i>Registrar</button>
-									<div>Already've an Account? <a id="signinlink" href="index.php">Sign In</a></div>
+									<button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i>Register</button>
+									<div>Already have an Account? <a id="signinlink" href="index.php">Sign In</a></div>
 								</div>
 							</div>
 						</form>
