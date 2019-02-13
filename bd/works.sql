@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-02-2019 a las 16:40:49
+-- Tiempo de generación: 13-02-2019 a las 15:59:27
 -- Versión del servidor: 10.1.37-MariaDB
--- Versión de PHP: 7.3.1
+-- Versión de PHP: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -67,7 +67,24 @@ INSERT INTO `mails` (`id`, `id_usuario`, `mail`) VALUES
 (26, 3, 'Info@to-jo.com'),
 (27, 3, 'WoodvilleFarmsLtd@gmail.com'),
 (28, 3, 'sal@bralfordproduce.com'),
-(29, 1, 'abcd@gmail.com');
+(29, 1, 'abcd@gmail.com'),
+(30, 4, 'hola@hola.com'),
+(31, 4, 'brayanjeshuavz@gmail.com'),
+(32, 4, 'jcamilo@tradex.com'),
+(33, 4, 'brayanjeshuavz@gail.com'),
+(34, 4, 'jcamilo@tradex.co'),
+(35, 4, 'talcorer@sadas.sadas'),
+(36, 2, 'tal@tal.com'),
+(37, 2, 'hola@tal.com'),
+(38, 1, 'hola@ola.com'),
+(39, 2, 'mala@mala.com'),
+(40, 2, 'sadsa@sada.casd'),
+(41, 2, 'jfonseca@tradexusalogistics.nl'),
+(42, 2, 'holque@tal.com'),
+(43, 2, 'saulo@saulin.com'),
+(44, 2, 'jondoe@example.com'),
+(45, 2, 'jsmith@example.com'),
+(46, 2, 'hola@ta2l.com');
 
 -- --------------------------------------------------------
 
@@ -118,7 +135,8 @@ INSERT INTO `trabajo` (`id_trabajo`, `id_usuario`, `calls`, `leads`, `followup`,
 (6, 2, 0, 1, 0, 0, 0, '2019-02-04'),
 (7, 4, 1, 1, 1, 1, 1, '2019-02-04'),
 (8, 2, 0, 0, 0, 0, 0, '2019-02-05'),
-(9, 3, 1, 1, 1, 1, 1, '2019-02-07');
+(9, 3, 1, 1, 1, 1, 1, '2019-02-07'),
+(10, 2, 0, 0, 0, 1, 0, '2019-02-07');
 
 -- --------------------------------------------------------
 
@@ -145,10 +163,11 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `password`, `nombre`, `correo`, `last_session`, `activacion`, `token`, `token_password`, `password_request`, `id_tipo`) VALUES
-(1, 'admin', '$2y$10$ZZZgvjPCUK2mh67HsBsRHOjeWlpUN3JbPEdv6seKwW5CioocY9PZG', 'Jeshua', 'brayan@tradexusalogistics.com', '2019-02-07 08:31:13', 1, '13d39c7d4184fcccc18d90f70b18beac', '', 0, 1),
-(2, 'jcamilo', '$2y$10$BSet0meH2FGvu7jaNKmizuAqqfPNcdA/CbSI2RCAglE36llmS7h8C', 'Juan Camilo', 'jcamilo@tradexusalogistics.com', '2019-02-05 14:16:27', 1, 'e9be41827c3fab2d444cad992f031762', '', 0, 2),
-(3, 'tony', '$2y$10$xo6EdDIn.o9nloPiarKgGuTPlH4VK591ZMPLVQvElG4PmTcQe.ACe', 'Anthony Manzanilla', 'anthony@tradexusalogistics.com', '2019-02-07 08:30:01', 1, '5cadc0911b9ac12690fb1ab67e08a7ee', '', 0, 2),
-(4, 'tony2', '$2y$10$xo6EdDIn.o9nloPiarKgGuTPlH4VK591ZMPLVQvElG4PmTcQe.ACe', 'Manzanillo', 'anthony@tradexusalogistics.com', '2019-02-05 14:47:32', 1, '5cadc0911b9ac12690fb1ab67e08a7ee', '', 0, 2);
+(1, 'admin', '$2y$10$ZZZgvjPCUK2mh67HsBsRHOjeWlpUN3JbPEdv6seKwW5CioocY9PZG', 'Jeshua', 'brayan@tradexusalogistics.com', '2019-02-11 11:22:46', 1, '13d39c7d4184fcccc18d90f70b18beac', '', 0, 1),
+(2, 'jcamilo', '$2y$10$BSet0meH2FGvu7jaNKmizuAqqfPNcdA/CbSI2RCAglE36llmS7h8C', 'Juan Camilo', 'jcamilo@tradexusalogistics.com', '2019-02-13 09:58:32', 1, 'e9be41827c3fab2d444cad992f031762', '', 0, 2),
+(3, 'tony', '$2y$10$xo6EdDIn.o9nloPiarKgGuTPlH4VK591ZMPLVQvElG4PmTcQe.ACe', 'Anthony Manzanilla', 'anthony@tradexusalogistics.com', '2019-02-11 09:44:01', 1, '5cadc0911b9ac12690fb1ab67e08a7ee', '', 0, 2),
+(4, 'tony2', '$2y$10$xo6EdDIn.o9nloPiarKgGuTPlH4VK591ZMPLVQvElG4PmTcQe.ACe', 'Manzanillo', 'anthony@tradexusalogistics.com', '2019-02-07 14:33:50', 1, '5cadc0911b9ac12690fb1ab67e08a7ee', '', 0, 2),
+(5, 'lol', '$2y$10$eduwoGTMdqRLEuGGzlUF2uD.pbecU3GAIqthwd0FRDW1mRJPyHUQO', 'lol', 'brayanjeshuavz@gmail.com', NULL, 0, '47956714f0a955d1a65887c143863785', NULL, 0, 2);
 
 --
 -- Índices para tablas volcadas
@@ -158,7 +177,8 @@ INSERT INTO `usuarios` (`id`, `usuario`, `password`, `nombre`, `correo`, `last_s
 -- Indices de la tabla `mails`
 --
 ALTER TABLE `mails`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_usuario` (`id_usuario`);
 
 --
 -- Indices de la tabla `tipo_usuario`
@@ -187,7 +207,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `mails`
 --
 ALTER TABLE `mails`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_usuario`
@@ -199,17 +219,23 @@ ALTER TABLE `tipo_usuario`
 -- AUTO_INCREMENT de la tabla `trabajo`
 --
 ALTER TABLE `trabajo`
-  MODIFY `id_trabajo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_trabajo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `mails`
+--
+ALTER TABLE `mails`
+  ADD CONSTRAINT `mails_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`);
 
 --
 -- Filtros para la tabla `trabajo`
